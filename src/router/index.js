@@ -1,0 +1,49 @@
+import { createRouter, createWebHistory } from 'vue-router'
+
+import HomePage from '../views/HomePage.vue'
+import AboutPage from '../views/AboutPage.vue'
+import MissionPage from '../views/MissionPage.vue'
+import DonatePage from '../views/DonatePage.vue'
+import ContactPage from '../views/ContactPage.vue'
+
+const routes = [
+  {
+    path: '/',
+    name: 'Home',
+    component: HomePage
+  },
+  {
+    path: '/about',
+    name: 'About',
+    component: AboutPage
+  },
+  {
+    path: '/mission',
+    name: 'Mission',
+    component: MissionPage
+  },
+  {
+    path: '/donate',
+    name: 'Donate',
+    component: DonatePage
+  },
+  {
+    path: '/contact',
+    name: 'Contact',
+    component: ContactPage
+  }
+]
+
+const router = createRouter({
+  history: createWebHistory(),
+  routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      return { top: 0 }
+    }
+  }
+})
+
+export default router
