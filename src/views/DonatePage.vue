@@ -2,7 +2,7 @@
 import { ref, computed } from 'vue'
 
 // TODO: Replace with your PayPal.me username
-const PAYPAL_USERNAME = 'slykuiper'
+const PAYPAL_USERNAME = 'hakdp'
 
 const selectedAmount = ref(null)
 const customAmount = ref('')

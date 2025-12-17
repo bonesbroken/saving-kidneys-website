@@ -14,7 +14,7 @@
           </h1>
           <p class="hero-subtitle">
             <!-- Add your tagline or brief description here -->
-            Join us in our mission to create positive change in our community.
+           Raising awareness about preventive behaviors, early detection, and a healthy lifestyle to stop the progression of Chronic Kidney Disease
           </p>
           <div class="hero-actions">
             <RouterLink to="/donate" class="btn btn-primary btn-lg">
@@ -83,7 +83,7 @@
         <div class="programs-grid">
           <div class="card">
             <div class="card-body">
-              <h3 class="card-title">Program 1</h3>
+              <h3 class="card-title">Food Distribution</h3>
               <p class="card-text">
                 Description of program or service goes here.
               </p>
@@ -91,20 +91,36 @@
           </div>
           <div class="card">
             <div class="card-body">
-              <h3 class="card-title">Program 2</h3>
+              <h3 class="card-title">The Caregiver's Corner</h3>
               <p class="card-text">
                 Description of program or service goes here.
               </p>
             </div>
           </div>
-          <div class="card">
-            <div class="card-body">
-              <h3 class="card-title">Program 3</h3>
-              <p class="card-text">
-                Description of program or service goes here.
-              </p>
-            </div>
-          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Supporters Section -->
+    <section class="section supporters-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Our Supporters</h2>
+
+        </div>
+        <div class="supporters-grid">
+          <a href="https://www.donatelifevirginia.org/" target="_blank" rel="noopener noreferrer" class="supporter-link">
+            <img src="/assets/images/Donate-Life-Virginia-Logo-Horizontal.webp" alt="Donate Life Virginia" class="supporter-logo" />
+          </a>
+          <a href="https://www.lifenethealth.org/" target="_blank" rel="noopener noreferrer" class="supporter-link">
+            <img src="/assets/images/lifenet.png" alt="LifeNet Health" class="supporter-logo" />
+          </a>
+          <a href="https://www.integritymedicareva.com/" target="_blank" rel="noopener noreferrer" class="supporter-link">
+            <img src="/assets/images/IIS LOGO 2.avif" alt="Integrity Insurance Services" class="supporter-logo" />
+          </a>
+          <a href="https://reps.modernwoodmen.org/jmcduffie/" target="_blank" rel="noopener noreferrer" class="supporter-link supporter-link-dark">
+            <img src="/assets/images/modernwoodmen.svg" alt="Modern Woodmen" class="supporter-logo" />
+          </a>
         </div>
       </div>
     </section>
@@ -210,9 +226,15 @@
 
 /* Programs Section */
 .programs-grid {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: var(--spacing-6);
+}
+
+.programs-grid .card {
+  flex: 0 1 350px;
+  max-width: 400px;
 }
 
 /* CTA Section */
@@ -264,6 +286,44 @@
   color: var(--color-secondary-dark);
 }
 
+/* Supporters Section */
+.supporters-section {
+  background-color: var(--color-gray-50);
+}
+
+.supporters-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-8);
+  align-items: center;
+  justify-items: center;
+}
+
+.supporter-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-6);
+  background-color: var(--color-white);
+  border-radius: var(--radius-xl);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.supporter-link:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.supporter-link-dark {
+  background-color: var(--color-gray-800);
+}
+
+.supporter-logo {
+  width: 180px;
+  height: 80px;
+  object-fit: contain;
+}
+
 /* Responsive */
 @media (min-width: 768px) {
   .hero {
@@ -277,11 +337,25 @@
   .programs-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .supporters-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .supporter-logo {
+    width: 200px;
+    height: 100px;
+  }
 }
 
 @media (max-width: 768px) {
   .hero-title {
     font-size: var(--font-size-3xl);
+  }
+
+  .programs-grid .card {
+    flex: 1 1 100%;
+    max-width: 100%;
   }
 }
 </style>

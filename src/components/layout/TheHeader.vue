@@ -7,6 +7,7 @@ const isMenuOpen = ref(false)
 const navLinks = [
   { name: 'Home', path: '/' },
   { name: 'About', path: '/about' },
+  { name: 'Programs', path: '/programs' },
   { name: 'Mission', path: '/mission' },
   { name: 'Donate', path: '/donate' },
   { name: 'Contact', path: '/contact' }
@@ -26,7 +27,8 @@ const closeMenu = () => {
     <div class="container header-container">
       <!-- Logo -->
       <RouterLink to="/" class="logo" @click="closeMenu">
-        <span class="logo-text">Saving Kidneys</span>
+        <img src="/assets/images/health-awareness-logo.png" alt="Health & Awareness, INC" class="logo-image" />
+        <span class="logo-text">Health & Awareness, INC</span>
       </RouterLink>
 
       <!-- Desktop Navigation -->
@@ -101,6 +103,11 @@ const closeMenu = () => {
   font-weight: var(--font-weight-bold);
   font-size: var(--font-size-xl);
   color: var(--color-primary);
+}
+
+.logo-image {
+  height: 48px;
+  width: auto;
 }
 
 .logo-text {

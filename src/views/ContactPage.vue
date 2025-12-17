@@ -99,8 +99,8 @@ const handleSubmit = () => {
                     <h4>Address</h4>
                     <p>
                       <!-- Add your address here -->
-                      123 Charity Street<br>
-                      City, State 12345
+                      P.O Box 64713<br>
+                      Virginia Beach, VA 23467
                     </p>
                   </div>
                 </div>
@@ -110,7 +110,7 @@ const handleSubmit = () => {
                   <div class="info-content">
                     <h4>Email</h4>
                     <p>
-                      <a href="mailto:info@charity.org">info@charity.org</a>
+                      <a href="mailto:info@charity.org">info@savingkidneys.org</a>
                     </p>
                   </div>
                 </div>
@@ -141,10 +141,9 @@ const handleSubmit = () => {
             <div class="info-section">
               <h3>Follow Us</h3>
               <div class="social-links">
-                <a href="#" class="social-link" aria-label="Facebook">Facebook</a>
-                <a href="#" class="social-link" aria-label="Twitter">Twitter</a>
-                <a href="#" class="social-link" aria-label="Instagram">Instagram</a>
-                <a href="#" class="social-link" aria-label="LinkedIn">LinkedIn</a>
+                <a href="https://www.facebook.com/HealthAwarenessInc" class="social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">Facebook</a>
+                <a href="https://x.com/healthawareinc" class="social-link" aria-label="Twitter" target="_blank" rel="noopener noreferrer">Twitter</a>
+                <a href="https://www.instagram.com/healthawareinc" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">Instagram</a>
               </div>
             </div>
           </div>

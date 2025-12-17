@@ -10,20 +10,19 @@
         <h1 class="page-title">Our Mission</h1>
         <p class="page-subtitle">
           <!-- Add your mission page tagline -->
-          What we stand for and what we aim to achieve.
+          Bring awareness to kidney health! Health & Awareness, Inc is a 501 (c)(3) organization that educates individuals in the community by raising awareness about preventive behaviors, early detection, and a healthy lifestyle to stop the progression of Chronic Kidney Disease
         </p>
       </div>
     </section>
 
     <!-- Mission Statement -->
-    <section class="section">
+    <section class="section" style="display: none;">
       <div class="container">
         <div class="mission-statement">
           <h2>Mission Statement</h2>
           <blockquote class="statement-quote">
             <!-- Add your mission statement here -->
-            "Your organization's mission statement goes here. This should be a clear, 
-            concise statement of your charity's purpose and goals."
+           Bring awareness to kidney health! Health & Awareness, Inc is a 501 (c)(3) organization that educates individuals in the community by raising awareness about preventive behaviors, early detection, and a healthy lifestyle to stop the progression of Chronic Kidney Disease
           </blockquote>
         </div>
       </div>
@@ -37,8 +36,7 @@
             <h2>Our Vision</h2>
             <p>
               <!-- Add your vision description here -->
-              Describe the future you're working to create. What does success look like? 
-              What world do you envision as a result of your work?
+              Our Vision is to decrease the rising numbers of chronic kidney failure by bridging the knowledge gap for better kidney care. We have adopted easy to understand rules that we call "Common Sense Rules".  The Common Sense Rules  focuses on understanding lab test results, forget dieting and change eating habits instead, read and follow the nutritional fact label, know the facts about organ donation and remembering there is no such thing as a one size fits all treatment plan.
             </p>
           </div>
           <div class="content-image">
@@ -46,6 +44,23 @@
               <span>Image</span>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Focus Section -->
+    <section class="section focus-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Our Focus</h2>
+          <p class="section-subtitle">
+            Addressing the leading causes of Chronic Kidney Disease
+          </p>
+        </div>
+        <div class="focus-content">
+          <p>
+            We educate people about diabetes and high blood pressure which are the two leading risk factors for Chronic Kidney Disease (CKD). Health & Awareness, INC advocates for systematic screening of all patients with diabetes and hypertension for CKD. We encourage preventative behaviors and healthcare compliance to guide people in the right direction for managing their health.
+          </p>
         </div>
       </div>
     </section>
@@ -202,6 +217,23 @@
   justify-content: center;
   color: var(--color-gray-500);
   font-size: var(--font-size-lg);
+}
+
+/* Focus Section */
+.focus-section {
+  background-color: var(--color-white);
+}
+
+.focus-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.focus-content p {
+  font-size: var(--font-size-lg);
+  color: var(--color-gray-700);
+  line-height: var(--line-height-relaxed);
 }
 
 /* Goals Section */

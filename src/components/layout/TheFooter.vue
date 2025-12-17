@@ -12,10 +12,9 @@ const quickLinks = [
 ]
 
 const socialLinks = [
-  { name: 'Facebook', url: '#', icon: 'facebook' },
-  { name: 'Twitter', url: '#', icon: 'twitter' },
-  { name: 'Instagram', url: '#', icon: 'instagram' },
-  { name: 'LinkedIn', url: '#', icon: 'linkedin' }
+  { name: 'Facebook', url: 'https://www.facebook.com/HealthAwarenessInc', icon: 'facebook' },
+  { name: 'Twitter', url: 'https://x.com/healthawareinc', icon: 'twitter' },
+  { name: 'Instagram', url: 'https://www.instagram.com/healthawareinc', icon: 'instagram' },
 ]
 </script>
 
@@ -25,7 +24,7 @@ const socialLinks = [
       <div class="footer-grid">
         <!-- About Section -->
         <div class="footer-section">
-          <h3 class="footer-title">Charity Name</h3>
+          <h3 class="footer-title">Health & Awareness, INC</h3>
           <p class="footer-description">
             <!-- Add your charity's brief description here -->
             Making a difference in our community through compassion, dedication, and action.
@@ -50,11 +49,11 @@ const socialLinks = [
           <address class="footer-contact">
             <p>
               <!-- Add your address here -->
-              123 Charity Street<br>
-              City, State 12345
+                P.O Box 64713<br>
+                Virginia Beach, VA 23467
             </p>
             <p>
-              <a href="mailto:info@charity.org" class="footer-link">info@charity.org</a>
+              <a href="mailto:info@savingkidneys.org" class="footer-link">info@savingkidneys.org</a>
             </p>
             <p>
               <a href="tel:+1234567890" class="footer-link">(123) 456-7890</a>
@@ -84,7 +83,7 @@ const socialLinks = [
       <!-- Bottom Bar -->
       <div class="footer-bottom">
         <p class="copyright">
-          &copy; {{ currentYear }} Charity Name. All rights reserved.
+          &copy; {{ currentYear }} Health & Awareness, INC. All rights reserved.
         </p>
         <div class="footer-legal">
           <a href="#" class="footer-link">Privacy Policy</a>
