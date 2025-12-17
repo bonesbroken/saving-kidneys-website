@@ -1,5 +1,7 @@
 <script setup>
 // ProgramsPage component
+const foodDistributionStartYear = 2021
+const yearsSinceFoodDistribution = new Date().getFullYear() - foodDistributionStartYear
 </script>
 
 <template>
@@ -20,7 +22,7 @@
         <div class="program-intro">
           <h2>Food Distribution</h2>
           <p>
-            Health & Awareness, Inc has been serving the community through our food distribution program for over 3 years. Each month, we distribute food to families in our communities that live in the following cities:
+            Health & Awareness, Inc has been serving the community through our food distribution program for over {{ yearsSinceFoodDistribution }} years. Each month, we distribute food to families in our communities that live in the following cities:
           </p>
           <div class="cities-badges">
             <span class="city-badge">Virginia Beach</span>
