@@ -59,7 +59,7 @@
           <h2 class="section-title">Our Mission</h2>
           <p class="section-subtitle">
             <!-- Add your mission statement preview here -->
-            Brief description of what your charity does and why it matters.
+            Our mission is to bring awareness to kidney health! Health & Awareness, Inc is a 501 (c)(3) organization that educates individuals in the community by raising awareness about preventive behaviors, early detection, and a healthy lifestyle to stop the progression of Chronic Kidney Disease.
           </p>
         </div>
         <div class="mission-content">
@@ -77,7 +77,7 @@
           <h2 class="section-title">What We Do</h2>
           <p class="section-subtitle">
             <!-- Add description of your programs -->
-            Our programs and services that help make a difference.
+            We educate people about diabetes and high blood pressure which are the two leading risk factors for Chronic Kidney Disease (CKD). Health & Awareness aims advocates for systematic screening of all patients with diabetes and hypertension for CKD. We encourage preventative behaviors and healthcare compliance to guide people in the right direction for managing their health.
           </p>
         </div>
         <div class="programs-grid">
