@@ -22,7 +22,7 @@ const handleSubmit = () => {
         <h1 class="page-title">Contact Us</h1>
         <p class="page-subtitle">
           <!-- Add your contact page tagline -->
-          We'd love to hear from you. Get in touch with us.
+          We'd love to hear from you. Get in touch with us and learn how to volunteer below.
         </p>
       </div>
     </section>
@@ -125,21 +125,12 @@ const handleSubmit = () => {
                   </div>
                 </div>
 
-                <div class="info-item">
-                  <div class="info-icon">🕐</div>
-                  <div class="info-content">
-                    <h4>Office Hours</h4>
-                    <p>
-                      Monday - Friday: 9am - 5pm<br>
-                      Saturday - Sunday: Closed
-                    </p>
-                  </div>
-                </div>
               </div>
             </div>
 
             <div class="info-section">
               <h3>Follow Us</h3>
+              <p class="social-intro">Following and engaging with us on our social media pages is a simple and effective way to get involved!</p>
               <div class="social-links">
                 <a href="https://www.facebook.com/HealthAwarenessInc" class="social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">Facebook</a>
                 <a href="https://x.com/healthawareinc" class="social-link" aria-label="Twitter" target="_blank" rel="noopener noreferrer">Twitter</a>
@@ -151,26 +142,37 @@ const handleSubmit = () => {
       </div>
     </section>
 
-    <!-- Map Section (Placeholder) -->
-    <section class="map-section">
-      <div class="map-placeholder">
-        <span>Map goes here</span>
-      </div>
-    </section>
-
-    <!-- Volunteer CTA -->
+    <!-- Get Involved CTA -->
     <section class="section volunteer-section">
       <div class="container">
         <div class="volunteer-content">
-          <h2>Want to Volunteer?</h2>
+          <h2>Want to Get Involved?</h2>
           <p>
-            We're always looking for passionate people to join our team. 
-            Whether you can spare a few hours or want to make a regular commitment, 
-            we have opportunities for you.
+            We're always looking for passionate people to get involved and further our mission of educating and raising awareness about chronic kidney disease. 
+            Whether you can spare a few hours or want to make a regular commitment, we have opportunities for you to volunteer, sponsor, or partner with our charity.
           </p>
-          <button class="btn btn-primary btn-lg">
-            Learn About Volunteering
-          </button>
+          <div class="involvement-options">
+            <RouterLink to="/donate" class="involvement-card">
+              <div class="involvement-icon">💝</div>
+              <h3>Donate</h3>
+              <p>Support our mission with a financial contribution</p>
+            </RouterLink>
+            <div class="involvement-card">
+              <div class="involvement-icon">🤝</div>
+              <h3>Volunteer</h3>
+              <p>Give your time to help in our programs</p>
+            </div>
+            <div class="involvement-card">
+              <div class="involvement-icon">⭐</div>
+              <h3>Sponsor</h3>
+              <p>Sponsor an event or program</p>
+            </div>
+            <div class="involvement-card">
+              <div class="involvement-icon">🏢</div>
+              <h3>Partner</h3>
+              <p>Partner with us as an organization</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -228,9 +230,14 @@ const handleSubmit = () => {
 }
 
 .info-section h3 {
-  margin-bottom: var(--spacing-6);
+  margin-bottom: var(--spacing-4);
   padding-bottom: var(--spacing-3);
   border-bottom: 2px solid var(--color-gray-200);
+}
+
+.social-intro {
+  color: var(--color-gray-600);
+  margin-bottom: var(--spacing-4);
 }
 
 .info-items {
@@ -310,24 +317,76 @@ const handleSubmit = () => {
 }
 
 .volunteer-content {
-  max-width: 600px;
+  max-width: 900px;
   margin: 0 auto;
   text-align: center;
 }
 
-.volunteer-content h2 {
+.volunteer-content > h2 {
   margin-bottom: var(--spacing-4);
 }
 
-.volunteer-content p {
+.volunteer-content > p {
   color: var(--color-gray-600);
-  margin-bottom: var(--spacing-6);
+  margin-bottom: var(--spacing-8);
+}
+
+.involvement-options {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-6);
+}
+
+.involvement-card {
+  background-color: var(--color-white);
+  padding: var(--spacing-6);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.involvement-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.involvement-icon {
+  font-size: var(--font-size-3xl);
+  margin-bottom: var(--spacing-3);
+}
+
+.involvement-card h3 {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-2);
+  color: var(--color-gray-900);
+}
+
+.involvement-card p {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-600);
+  margin-bottom: 0;
 }
 
 /* Responsive */
 @media (min-width: 768px) {
   .contact-grid {
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .involvement-options {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .involvement-options {
+    grid-template-columns: 1fr;
   }
 }
 </style>

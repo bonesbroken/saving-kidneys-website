@@ -3,6 +3,7 @@ import { ref, computed } from 'vue'
 
 // TODO: Replace with your PayPal.me username
 const PAYPAL_USERNAME = 'hakdp'
+const CASHAPP_USERNAME = 'HealthyKidney'
 
 const selectedAmount = ref(null)
 const customAmount = ref('')
@@ -25,6 +26,15 @@ const paypalUrl = computed(() => {
   return `https://paypal.me/${PAYPAL_USERNAME}`
 })
 
+// Generate CashApp URL with pre-filled amount
+const cashappUrl = computed(() => {
+  const amount = donationAmount.value
+  if (amount && amount > 0) {
+    return `https://cash.app/$${CASHAPP_USERNAME}/${amount}`
+  }
+  return `https://cash.app/$${CASHAPP_USERNAME}`
+})
+
 const selectAmount = (amount) => {
   selectedAmount.value = amount
   customAmount.value = ''
@@ -42,6 +52,15 @@ const handleDonate = () => {
   // Open PayPal in a new tab
   window.open(paypalUrl.value, '_blank')
 }
+
+const handleDonateCashApp = () => {
+  if (!donationAmount.value || donationAmount.value <= 0) {
+    alert('Please select or enter a donation amount')
+    return
+  }
+  // Open CashApp in a new tab
+  window.open(cashappUrl.value, '_blank')
+}
 </script>
 
 <template>
@@ -52,7 +71,7 @@ const handleDonate = () => {
         <h1 class="page-title">Donate</h1>
         <p class="page-subtitle">
           <!-- Add your donate page tagline -->
-          Your generosity makes our work possible.
+          Your continued support make it possible for Health & Awareness to serve the community.
         </p>
       </div>
     </section>
@@ -97,14 +116,25 @@ const handleDonate = () => {
               </div>
             </div>
 
-            <!-- Donate Button -->
-            <button 
-              type="button" 
-              class="btn btn-primary btn-lg donate-submit"
-              @click="handleDonate"
-            >
-              Donate Now {{ donationAmount ? `$${donationAmount}` : '' }}
-            </button>
+            <!-- Donate Buttons -->
+            <div class="donate-buttons">
+              <button 
+                type="button" 
+                class="btn btn-primary btn-lg donate-submit"
+                @click="handleDonate"
+              >
+                <img src="/assets/images/PayPal_Logo_Icon_2014.svg" alt="PayPal" class="btn-icon" />
+                Donate via PayPal {{ donationAmount ? `$${donationAmount}` : '' }}
+              </button>
+              <button 
+                type="button" 
+                class="btn btn-secondary btn-lg donate-submit"
+                @click="handleDonateCashApp"
+              >
+                <img src="/assets/images/cashapp.svg" alt="CashApp" class="btn-icon" />
+                Donate via CashApp {{ donationAmount ? `$${donationAmount}` : '' }}
+              </button>
+            </div>
 
             <p class="secure-note">
               🔒 Your donation is secure and encrypted.
@@ -278,9 +308,37 @@ const handleDonate = () => {
   gap: var(--spacing-4);
 }
 
+.donate-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+  margin-top: var(--spacing-4);
+}
+
 .donate-submit {
   width: 100%;
-  margin-top: var(--spacing-4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-2);
+}
+
+.btn-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  background-color: var(--color-white);
+  border-radius: var(--radius-full);
+  padding: 4px;
+}
+
+.btn-secondary {
+  background-color: #00D632;
+  color: var(--color-white);
+}
+
+.btn-secondary:hover {
+  background-color: #00B82B;
 }
 
 .secure-note {

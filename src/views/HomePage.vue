@@ -80,46 +80,24 @@
             We educate people about diabetes and high blood pressure which are the two leading risk factors for Chronic Kidney Disease (CKD). Health & Awareness aims advocates for systematic screening of all patients with diabetes and hypertension for CKD. We encourage preventative behaviors and healthcare compliance to guide people in the right direction for managing their health.
           </p>
         </div>
-        <div class="programs-grid">
-          <div class="card">
-            <div class="card-body">
-              <h3 class="card-title">Food Distribution</h3>
-              <p class="card-text">
-                Description of program or service goes here.
-              </p>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-body">
-              <h3 class="card-title">The Caregiver's Corner</h3>
-              <p class="card-text">
-                Description of program or service goes here.
-              </p>
-            </div>
-          </div>
+        <div class="mission-content">
+          <RouterLink to="/programs" class="btn btn-secondary">
+            Learn About Our Programs
+          </RouterLink>
         </div>
       </div>
     </section>
 
-    <!-- Supporters Section -->
-    <section class="section supporters-section">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Our Supporters</h2>
 
-        </div>
-        <div class="supporters-grid">
-          <a href="https://www.donatelifevirginia.org/" target="_blank" rel="noopener noreferrer" class="supporter-link">
-            <img src="/assets/images/Donate-Life-Virginia-Logo-Horizontal.webp" alt="Donate Life Virginia" class="supporter-logo" />
-          </a>
-          <a href="https://www.lifenethealth.org/" target="_blank" rel="noopener noreferrer" class="supporter-link">
-            <img src="/assets/images/lifenet.png" alt="LifeNet Health" class="supporter-logo" />
-          </a>
-          <a href="https://www.integritymedicareva.com/" target="_blank" rel="noopener noreferrer" class="supporter-link">
-            <img src="/assets/images/IIS LOGO 2.avif" alt="Integrity Insurance Services" class="supporter-logo" />
-          </a>
-          <a href="https://reps.modernwoodmen.org/jmcduffie/" target="_blank" rel="noopener noreferrer" class="supporter-link supporter-link-dark">
-            <img src="/assets/images/modernwoodmen.svg" alt="Modern Woodmen" class="supporter-logo" />
+    <!-- Events Section -->
+    <section class="section events-section">
+      <div class="container">
+        <div class="events-card">
+          <div class="events-icon">📅</div>
+          <h3>Check Out Our Events</h3>
+          <p>We host health workshops, community outreach events, and educational seminars throughout the year. Visit our Eventbrite page to see what's coming up and register!</p>
+          <a href="https://www.eventbrite.com/cc/saving-kidneys-2016669" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
+            View Events on Eventbrite
           </a>
         </div>
       </div>
@@ -141,6 +119,29 @@
               Get Involved
             </RouterLink>
           </div>
+        </div>
+      </div>
+    </section>
+        <!-- Supporters Section -->
+    <section class="section supporters-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Our Supporters</h2>
+
+        </div>
+        <div class="supporters-grid">
+          <a href="https://www.donatelifevirginia.org/" target="_blank" rel="noopener noreferrer" class="supporter-link">
+            <img src="/assets/images/Donate-Life-Virginia-Logo-Horizontal.webp" alt="Donate Life Virginia" class="supporter-logo" />
+          </a>
+          <a href="https://www.lifenethealth.org/" target="_blank" rel="noopener noreferrer" class="supporter-link">
+            <img src="/assets/images/lifenet.png" alt="LifeNet Health" class="supporter-logo" />
+          </a>
+          <a href="https://www.integritymedicareva.com/" target="_blank" rel="noopener noreferrer" class="supporter-link">
+            <img src="/assets/images/IIS LOGO 2.avif" alt="Integrity Insurance Services" class="supporter-logo" />
+          </a>
+          <a href="https://reps.modernwoodmen.org/jmcduffie/" target="_blank" rel="noopener noreferrer" class="supporter-link supporter-link-dark">
+            <img src="/assets/images/modernwoodmen.svg" alt="Modern Woodmen" class="supporter-logo" />
+          </a>
         </div>
       </div>
     </section>
@@ -192,6 +193,7 @@
 
 /* Stats Section */
 .stats-section {
+  display: none;
   background-color: var(--color-gray-50);
 }
 
@@ -322,6 +324,36 @@
   width: 180px;
   height: 80px;
   object-fit: contain;
+}
+
+/* Events Section */
+.events-section {
+  background-color: var(--color-gray-50);
+}
+
+.events-card {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: var(--color-white);
+  padding: var(--spacing-10);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+}
+
+.events-icon {
+  font-size: 4rem;
+  margin-bottom: var(--spacing-4);
+}
+
+.events-card h3 {
+  margin-bottom: var(--spacing-4);
+  color: var(--color-gray-900);
+}
+
+.events-card p {
+  color: var(--color-gray-600);
+  margin-bottom: var(--spacing-6);
 }
 
 /* Responsive */
